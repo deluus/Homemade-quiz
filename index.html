@@ -16,40 +16,27 @@
 <body>
     <div class="wrapper">
         <div class="container">
-            <div class="card-contents">
+            <div class="card-contents start-screen">
                 <h1> Coding Quiz </h1>
                 <button id="start-button">start</button>
                 <button id="next">next</button>
             </div>
 
-            <div id="questions">
-                <h2> whats your favorite color</h2>
+            <div id="questions" class="hide">
+                <h2 id="questionTitle"> whats your favorite color</h2>
                 <!-- add the click button -->
-                <button data-answer="Yellow">Yellow</button>
-                <button data-answer="Green">Green</button>
-                <button data-answer="Blue">Blue</button>
-                <button data-answer="Pink">Pink</button>
-                
-            </div>
-               <div id="questions">
-                <h2> whats your favorite color</h2>
-              <!-- add the click button -->
-                <button data-answer="Yellow">Yellow</button>
-                <button data-answer="Green">Green</button>
-                <button data-answer="Blue">Blue</button>
-                <button data-answer="Pink">Pink</button>
-                
-            </div>
-            <div id="questions">
-                <h2> whats your favorite color</h2>
-                <!-- add the click button -->
-                <button data-answer="Yellow">Yellow</button>
-                <button data-answer="Green">Green</button>
-                <button data-answer="Blue">Blue</button>
-                <button data-answer="Pink">Pink</button>
-                
+                <div id="choices">
+                </div>                
             </div>
 
+            <div id="endScreen" class="hide">
+                <h2>Quiz Over</h2>
+                <p>Your final score is <span id="finalScore"></span></p>
+                <p>
+                    Enter your initials <input type="text" id="initials" max="3"/>
+                    <button id="submit">Submit</button>
+                </p>
+            </div>
         </div>
     
     </div>
