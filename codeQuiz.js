@@ -12,17 +12,25 @@ var questionPointer = 0;
 var questionsEl = document.getElementById('questions');
 var questions = [
     { 
-        question: "whats your favorite color?",
+        question: "what the are the main components for a refrigeration system?",
         choices: [
-            "Yellow",
-            "Green",
-            "Blue",
-            "Pink"       
+            "Compressor,Condesor,Metering Device, Suction line",
+            "Metering Device, Gauges, Filter Dryer,Reservior",
+            "Compressor, Evaporator, Condesor, Metering Device",
+            "Sensing Bulb, Liquid Line, Fan, Switch"       
         ], 
-        correct: "Green"
+        correct: "Compressor, Evaporator, Condesor, Metering Device"
     },
-
-    
+   { 
+        question: "what is one type of compressor?",
+        choices: [
+            "Screw",
+            "TXV",
+            "Capilary",
+            "Suction"       
+        ], 
+        correct: "Screw"
+    },
 ];
 
 // var container = document.querySelector('container')
@@ -33,6 +41,15 @@ var questions = [
 // console.log(element)
 
 // });
+
+function startQuiz() {
+    startScreen.setAttribute('class', 'hide');
+    questionsEl.removeAttribute('class');
+    timer()
+    nextQuestion()
+}
+
+
 
 function timer(){
     var timeInterval = setInterval (function(){
@@ -69,27 +86,12 @@ function nextQuestion() {
 
         choiceBtn.textContent = i+1+'. ' + choice;
 
-        choiceBtn.onclick = answerQueston;
+        choiceBtn.onclick = answerQuestion;
         choicesEl.appendChild(choiceBtn);
     })
 }
 
-function startQuiz() {
-    startScreen.setAttribute('class', 'hide');
-    questionsEl.removeAttribute('class');
-    timer()
-    nextQuestion()
-}
-
-function quizOver() {
-    endScreen.removeAttribute('class');
-    finalScore.textContent = timeLeft;
-    questionsEl.setAttribute('class', 'hide');
-}
-
-
-
-function answerQueston() {
+function answerQuestion() {
     if(this.value !== questions[questionPointer].correct) {
         timeLeft -= 15;
 
@@ -109,5 +111,12 @@ function answerQueston() {
         nextQuestion();
     }
 }
+
+function quizOver() {
+    endScreen.removeAttribute('class');
+    finalScore.textContent = timeLeft;
+    questionsEl.setAttribute('class', 'hide');
+}
+
 
 startButton.addEventListener('click', startQuiz);
