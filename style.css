@@ -1,7 +1,46 @@
+/*  settings for the page*/
 body{
-    background-color: white;
+    background-color: skyblue;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
-
+/*  allows the start content to hide when quiz starts */
 .hide {
     display: none;
+}
+
+/*container for all the content  */
+/* width of the page will be 800px, max with set at 80% so it doesnt over flow*/
+.container{
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+} 
+
+/*  sit questions in the grid style. */
+.choices-btn{
+    display: grid;
+    gap: 20px;
+    border-radius: 5px;
+}
+.button{
+    background-color: rgb(115, 115, 201);
+    outline: none;
+    padding: 10px 15px;
+    color: white;
+}
+.button:hover {
+    border-color: black;
+}
+.start-button, .next-button{
+    font-size: 20px;
+    font-weight: bold
 }

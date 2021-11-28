@@ -4,11 +4,14 @@ var startScreen = document.querySelector('.start-screen')
 var questionTitle = document.querySelector('#questionTitle');
 var endScreen = document.querySelector('#endScreen');
 var finalScore = document.querySelector('#finalScore');
+// var submitButton = documetn.querySelector('#submit');
+// var userName= "";
 
 var choicesEl = document.querySelector('#choices')
 var timeLeft = 100;
 var timerId;
 var questionPointer = 0;
+var shuffledQuestions
 var questionsEl = document.getElementById('questions');
 var questions = [
     { 
@@ -16,10 +19,10 @@ var questions = [
         choices: [
             "Compressor,Condesor,Metering Device, Suction line",
             "Metering Device, Gauges, Filter Dryer,Reservior",
-            "Compressor, Evaporator, Condesor, Metering Device",
+            "Compressor, Evaporator, Condeser, Metering Device",
             "Sensing Bulb, Liquid Line, Fan, Switch"       
         ], 
-        correct: "Compressor, Evaporator, Condesor, Metering Device"
+        correct: "Compressor, Evaporator, Condeser, Metering Device"
     },
    { 
         question: "what is one type of compressor?",
@@ -44,6 +47,8 @@ var questions = [
 
 function startQuiz() {
     startScreen.setAttribute('class', 'hide');
+    // shuffledQuestions = questions.sort(() => Math.random() - .5)
+    // questionPointer= 0
     questionsEl.removeAttribute('class');
     timer()
     nextQuestion()
@@ -118,5 +123,13 @@ function quizOver() {
     questionsEl.setAttribute('class', 'hide');
 }
 
+var highScores = JSON.parse(localStorage.getItem("highsores"))|| [];
+
+function submitInitials(){
+    
+}
+
 
 startButton.addEventListener('click', startQuiz);
+
+submitButton.addEventListener('click', submitInitials);
