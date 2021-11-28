@@ -4,8 +4,8 @@ var startScreen = document.querySelector('.start-screen')
 var questionTitle = document.querySelector('#questionTitle');
 var endScreen = document.querySelector('#endScreen');
 var finalScore = document.querySelector('#finalScore');
-// var submitButton = documetn.querySelector('#submit');
-// var userName= "";
+var submitButton = document.querySelector('#submit');
+
 
 var choicesEl = document.querySelector('#choices')
 var timeLeft = 100;
@@ -121,15 +121,32 @@ function quizOver() {
     endScreen.removeAttribute('class');
     finalScore.textContent = timeLeft;
     questionsEl.setAttribute('class', 'hide');
+    
+submitButton.addEventListener('click', submitInitials);
 }
 
-var highScores = JSON.parse(localStorage.getItem("highsores"))|| [];
+// var highScores = JSON.parse(localStorage.setItem("highsores"))|| [];
+
+// function submitScores(){
+
+// }
+var HighScoresArray = []
 
 function submitInitials(){
+    var score = timeLeft
+    var initials = document.querySelector('#initials').value
+    var currentScores = {
+        score : score,
+        initials : initials
+    }
+    HighScoresArray.push(currentScores)
+
+    // console.log(score)
+    // console.log(initials)
+    localStorage.setItem("highscores",JSON.stringify(HighScoresArray) )
     
+
 }
 
 
 startButton.addEventListener('click', startQuiz);
-
-submitButton.addEventListener('click', submitInitials);
