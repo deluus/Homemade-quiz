@@ -1,3 +1,4 @@
+var userName = document.querySelector('initials')
 var startButton = document.getElementById("start-button");
 var timerEl = document.getElementById('countdown');
 var startScreen = document.querySelector('.start-screen')
@@ -132,10 +133,10 @@ function submitInitials(){
     var score = timeLeft
     var initials = document.querySelector('#initials').value
     var currentScores = {
-        score : score,
-        initials : initials
+        score : finalScore,
+        initials : userName,
     }
-    HighScoresArray.push(currentScores)
+    HighScoresArray.push(finalScore)
 
     localStorage.setItem("highScores",JSON.stringify(HighScoresArray) );
     // console.log(currentScores)
