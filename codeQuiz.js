@@ -125,9 +125,10 @@ function quizOver() {
 submitButton.addEventListener('click', submitInitials);
 }
 
-var HighScoresArray = []
+var HighScoresArray = "";
 
 function submitInitials(){
+    // var HighScoresArray = currentScores
     var score = timeLeft
     var initials = document.querySelector('#initials').value
     var currentScores = {

@@ -3,12 +3,17 @@ var saveScoreButton = document.querySelector('#saveScoreButton');
 var mostRecentScore = document.querySelector('#mostRecentScore');
 
 
-var highScores = JSON.parse(localStorage.getItem('highScores')) || []
-highScores.forEach(element => (element));
+var UL = document.getElementById("highscoresList")
 
-var UL = document.getElementById("highscoresList").innerHTML="";
-console.log(UL)
 
+
+
+// function addElement(){
+//     var node = document.createElement("Ul");
+//     var textNode = document.createTextNode("highscoresList")
+//     node.appendchild(textNode);
+//     document.getElementById("highscoresList").appendchild(node);
+// }
 // function addElement (){
 //     var newLi = document.createElement("Li");
 //     var newContent = document.createTextNode ("High Scores")
@@ -16,12 +21,20 @@ console.log(UL)
 //     var currentLi = document.getElementById('highscoresList');
 //     document.body.insertBefore(newLi, currentLi)
 // }
-// console.log(currentLi)
+
 
 
 
 function displayScore(){
-    var finalScore = localStorage.getItem('highScores')
+    // var finalScore = JSON.parse(localStorage.getItem('HighScoresArray'))
+    var highScores = JSON.parse(localStorage.getItem('highScores')) || []
+highScores.forEach(element => (element));
 
-highScoresList.innerHTML = localStorage.getItem('highScores')
+for (var i = 0; i < highScores.length; i ++){
+    var li = document.createElement("li")
+    li.innerHTML = initials, score;
+    UL.append(li)
+}
+
+// highScoresList.innerHTML = localStorage.getItem('highScores')
 }
