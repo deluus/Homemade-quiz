@@ -22,3 +22,4 @@ highScoresList.innerHTML = localStorage.getItem('highScores')
 // if(highScoresList){
 //     return startQuiz;
 // }
+}
