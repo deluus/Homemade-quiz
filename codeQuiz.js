@@ -47,11 +47,9 @@ var questions = [
     },
 ];
 
-// git
+
 function startQuiz() {
     startScreen.setAttribute('class', 'hide');
-    // shuffledQuestions = questions.sort(() => Math.random() - .5)
-    // questionPointer= 0
     questionsEl.removeAttribute('class');
     timer()
     nextQuestion()
@@ -138,9 +136,8 @@ function submitInitials(){
     }
     HighScoresArray.push(currentScores)
 
-    localStorage.setItem("highscores",JSON.stringify(HighScoresArray) );
-    localStorage= JSON.parse(localStorage.getItem('currentScores'));
-    console.log(currentScores)
+    localStorage.setItem("highScores",JSON.stringify(HighScoresArray) );
+    // console.log(currentScores)
     
    window.location.href ="scores.html"
 
@@ -150,4 +147,4 @@ function submitInitials(){
 
 
 startButton.addEventListener('click', startQuiz);
-restartButton.addEventListener('click', startQuiz)
+// restartButton.addEventListener('click', restartQuiz)
