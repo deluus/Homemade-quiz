@@ -1,25 +1,24 @@
 var highScoresList = document.querySelector("#highScores");
 var saveScoreButton = document.querySelector('#saveScoreButton');
-// var finalScore = document.querySelector('#finalScore');
 var mostRecentScore = document.querySelector('#mostRecentScore');
-// var restartGame= startQuiz;
+
 
 var highScores = JSON.parse(localStorage.getItem('highScores')) || []
+highScores.forEach(element => console.log (element));
 
-console.log(highScores)
+function addElement (){
+    var newLi = document.createElement("Li");
+    var newContent = document.createTextNode ("High Scores")
+    newLi.appendchild(HighScoresArray);
+    var currentLi = document.getElementById('highscoresList');
+    document.body.insertBefore(newLi, currentLi)
+}
+console.log(currentLi)
 
-// finalScore.innerHTML = mostRecentScore
-
-// highScoresList.addEventListener( 'click') 
 
 
 function displayScore(){
     var finalScore = localStorage.getItem('highScores')
 
 highScoresList.innerHTML = localStorage.getItem('highScores')
-// console.log(highScores)
-// }
-// if(highScoresList){
-//     return startQuiz;
-// }
 }
