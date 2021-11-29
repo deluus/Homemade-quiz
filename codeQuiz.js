@@ -128,23 +128,23 @@ submitButton.addEventListener('click', submitInitials);
 
 
 function submitInitials(){
-    var HighScoresArray = JSON.parse (localStorage.getItem('highScore')) || []
+    var highscoresArray = JSON.parse (localStorage.getItem('highScore')) || []
     var score = timeLeft
     var initials = document.querySelector('#initials').value
-    var currentScores = {
+    var currentScore = {
         score : score,
         initials : initials,
     }
-    HighScoresArray.push(currentScores)
+    highscoresArray.push(currentScore)
 
-    localStorage.setItem("highScores",JSON.stringify(HighScoresArray) );
+    localStorage.setItem("highScore",JSON.stringify(highscoresArray) );
     // console.log(currentScores)
     
  
 
   
 }
-window.location.assign("/");
+window.location.assign("");
 
 
 startButton.addEventListener('click', startQuiz);
