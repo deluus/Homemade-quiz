@@ -1,10 +1,10 @@
-var userName = document.querySelector('initials')
+var initials = document.querySelector('initials')
 var startButton = document.getElementById("start-button");
 var timerEl = document.getElementById('countdown');
 var startScreen = document.querySelector('.start-screen')
 var questionTitle = document.querySelector('#questionTitle');
 var endScreen = document.querySelector('#endScreen');
-var finalScore = document.querySelector('#finalScore');
+var currentScore = document.querySelector('#finalScore');
 var submitButton = document.querySelector('#submit');
 var restartButton = document.querySelector('#restart')
 
@@ -126,26 +126,25 @@ function quizOver() {
 submitButton.addEventListener('click', submitInitials);
 }
 
-var HighScoresArray = "";
 
 function submitInitials(){
-    // var HighScoresArray = currentScores
+    var HighScoresArray = JSON.parse (localStorage.getItem('highScore')) || []
     var score = timeLeft
     var initials = document.querySelector('#initials').value
     var currentScores = {
-        score : finalScore,
-        initials : userName,
+        score : score,
+        initials : initials,
     }
-    HighScoresArray.push(finalScore)
+    HighScoresArray.push(currentScores)
 
     localStorage.setItem("highScores",JSON.stringify(HighScoresArray) );
     // console.log(currentScores)
     
-   window.location.href ="scores.html"
+ 
 
   
 }
-
+window.location.assign("/");
 
 
 startButton.addEventListener('click', startQuiz);

@@ -1,7 +1,7 @@
 var userName = document.querySelector('#initials')
 var highScoresList = document.querySelector("#highScores");
 var saveScoreButton = document.querySelector('#saveScoreButton');
-var mostRecentScore = document.querySelector('#mostRecentScore');
+// var mostRecentScore = document.querySelector('#mostRecentScore');
 
 
 var UL = document.getElementById("highscoresList")
@@ -18,7 +18,7 @@ function addElement(){
 function addElement (){
     var newLi = document.createElement("Li");
     var newContent = document.createTextNode ("High Scores")
-    newLi.appendchild(HighScoresArray);
+    newLi.appendchild(newContent);
     var currentLi = document.getElementById('highscoresList');
     document.body.insertBefore(newLi, currentLi)
 }
@@ -39,5 +39,5 @@ for (var i = 0; i < highScores.length; i ++){
 
 }
 
-// highScoresList.innerHTML = localStorage.getItem('highScores')
+
 }
