@@ -138,13 +138,13 @@ function submitInitials(){
     highscoresArray.push(currentScore)
 
     localStorage.setItem("highScore",JSON.stringify(highscoresArray) );
-    // console.log(currentScores)
+
     
  
 
   
 }
-window.location.assign("");
+window.location = "scores.html";
 
 
 startButton.addEventListener('click', startQuiz);

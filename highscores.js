@@ -27,8 +27,8 @@ function addElement (){
 
 
 function displayScore(){
-    var highScores = JSON.parse(localStorage.getItem('highScore')) || []
-
+    var highScores = JSON.parse(localStorage.getItem('highscore')) || []
+console.log(highScores)
 
 for (var i = 0; i < highScores.length; i ++){
     var li = document.createElement("li")
@@ -36,6 +36,7 @@ for (var i = 0; i < highScores.length; i ++){
     uL.append(li)
 
 }
+window.location = "scores.html";
 
 return;
 }
