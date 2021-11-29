@@ -4,7 +4,7 @@ var saveScoreButton = document.querySelector('#saveScoreButton');
 // var mostRecentScore = document.querySelector('#mostRecentScore');
 
 
-var uL = document.getElementById("highscoresList")
+var ul = document.getElementById("highscoresList")
 
 
 
@@ -17,7 +17,7 @@ function addElement(){
 }
 function addElement (){
     var newLi = document.createElement("li");
-    var newContent = document.createTextNode ("HighScore")
+    var newContent = document.createTextNode ("highScore")
     newLi.appendchild(newContent);
     var currentLi = document.getElementById('highscoresList');
     document.body.insertBefore(newLi, currentLi)
@@ -27,15 +27,18 @@ function addElement (){
 
 
 function displayScore(){
-    var highScores = JSON.parse(localStorage.getItem('highscore')) || []
-console.log(highScores)
+    var highScores = JSON.parse(localStorage.getItem('highScore')) || []
+    
+// console.log(highScores)
 
 for (var i = 0; i < highScores.length; i ++){
     var li = document.createElement("li")
     li.innerHTML = highScores[i].initials, highScores[i].score;
-    uL.append(li)
+    ul.append(li)
     
    } 
+}
+ 
 
-  }
- displayScore()
+ console.log(displayScore());
+
