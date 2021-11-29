@@ -44,3 +44,8 @@ body{
     font-size: 20px;
     font-weight: bold
 }
+
+.timer-container{
+    background-color: green;
+    font-size: 30px;
+}

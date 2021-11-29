@@ -34,17 +34,24 @@ var questions = [
         ], 
         correct: "Screw"
     },
+    { 
+        question: "what state is the refrigerant in , when it leaves the evaportator?",
+        choices: [
+            "Liquid",
+            "100 % Vapor",
+            "Saturated Vapor",
+            "Sub-Cooled Liquid"       
+        ], 
+        correct: "100 % Vapor"
+    },
 ];
 
-// var container = document.querySelector('container')
+// window.onload = function(){
 
-// container.addEventListener("click", function(event){
+//     HighScoresArray =localStorage.getItem("highscores");
+//     HighScoresArray.push(currentScores)
 
-// var element = event.target;
-// console.log(element)
-
-// });
-
+// }
 function startQuiz() {
     startScreen.setAttribute('class', 'hide');
     // shuffledQuestions = questions.sort(() => Math.random() - .5)
@@ -110,7 +117,6 @@ function answerQuestion() {
     questionPointer++;
     
     if(questionPointer === questions.length) {
-       // quizOver();
         quizOver();
     } else {
         nextQuestion();
@@ -125,11 +131,6 @@ function quizOver() {
 submitButton.addEventListener('click', submitInitials);
 }
 
-// var highScores = JSON.parse(localStorage.setItem("highsores"))|| [];
-
-// function submitScores(){
-
-// }
 var HighScoresArray = []
 
 function submitInitials(){
@@ -145,6 +146,13 @@ function submitInitials(){
     // console.log(initials)
     localStorage.setItem("highscores",JSON.stringify(HighScoresArray) )
     
+   
+    // window.location.href = (scores.html)
+
+    // for ( i = 0; i < localStorage.length; i ++){
+    //     score=localStorage.score(i)
+    //     initials=localStorage.getItem(score);
+    // }
 
 }
 
