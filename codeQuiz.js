@@ -46,12 +46,7 @@ var questions = [
     },
 ];
 
-// window.onload = function(){
-
-//     HighScoresArray =localStorage.getItem("highscores");
-//     HighScoresArray.push(currentScores)
-
-// }
+// git
 function startQuiz() {
     startScreen.setAttribute('class', 'hide');
     // shuffledQuestions = questions.sort(() => Math.random() - .5)
