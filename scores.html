@@ -8,20 +8,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div clas="container">
-      <div id =" highscores" class ="flex-center flex-column">
-          <h1 id="highScores">0</h1>
-          <form calss="scores container">
-              <h2 id ="enter-initials"> </h2>
+    <div class="scores-container">
+      <div id =" highscores-box" class ="flex-center flex-column">
+          <h1 id="highScores">High Scores</h1>
+          <ul id="highscoresList"></ul>
+       
+          
+          <form clsss="scores container">
+             <div id ="restart" class="restart-btn"> </div>
+              <button> Restart Game</button>
           </form>
+      
           
       </div>
     </div>
     
 </body>
 </html>
-
-
-
- <!-- 
- var highScores = JSON.parse(localStorage.setItem("highsores"))|| []; -->
+<script src= "highscores.js"></script>

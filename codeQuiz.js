@@ -5,6 +5,7 @@ var questionTitle = document.querySelector('#questionTitle');
 var endScreen = document.querySelector('#endScreen');
 var finalScore = document.querySelector('#finalScore');
 var submitButton = document.querySelector('#submit');
+var restartButton = document.querySelector('#restart')
 
 
 var choicesEl = document.querySelector('#choices')
@@ -137,19 +138,16 @@ function submitInitials(){
     }
     HighScoresArray.push(currentScores)
 
-    // console.log(score)
-    // console.log(initials)
-    localStorage.setItem("highscores",JSON.stringify(HighScoresArray) )
+    localStorage.setItem("highscores",JSON.stringify(HighScoresArray) );
+    localStorage= JSON.parse(localStorage.getItem('currentScores'));
+    console.log(currentScores)
     
-   
-    // window.location.href = (scores.html)
+   window.location.href ="scores.html"
 
-    // for ( i = 0; i < localStorage.length; i ++){
-    //     score=localStorage.score(i)
-    //     initials=localStorage.getItem(score);
-    // }
-
+  
 }
 
 
+
 startButton.addEventListener('click', startQuiz);
+restartButton.addEventListener('click', startQuiz)

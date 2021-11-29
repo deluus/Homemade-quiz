@@ -48,4 +48,22 @@ body{
 .timer-container{
     background-color: green;
     font-size: 30px;
+    border-radius: 10px;
 }
+#time-left{
+    color: white;
+}
+
+
+
+/* Scores CSS */
+.scores-container{
+    width:800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+
+}
+
