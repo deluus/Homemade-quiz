@@ -4,16 +4,19 @@ var mostRecentScore = document.querySelector('#mostRecentScore');
 
 
 var highScores = JSON.parse(localStorage.getItem('highScores')) || []
-highScores.forEach(element => console.log (element));
+highScores.forEach(element => (element));
 
-function addElement (){
-    var newLi = document.createElement("Li");
-    var newContent = document.createTextNode ("High Scores")
-    newLi.appendchild(HighScoresArray);
-    var currentLi = document.getElementById('highscoresList');
-    document.body.insertBefore(newLi, currentLi)
-}
-console.log(currentLi)
+var UL = document.getElementById("highscoresList").innerHTML="";
+console.log(UL)
+
+// function addElement (){
+//     var newLi = document.createElement("Li");
+//     var newContent = document.createTextNode ("High Scores")
+//     newLi.appendchild(HighScoresArray);
+//     var currentLi = document.getElementById('highscoresList');
+//     document.body.insertBefore(newLi, currentLi)
+// }
+// console.log(currentLi)
 
 
 
