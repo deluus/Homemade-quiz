@@ -34,9 +34,8 @@ for (var i = 0; i < highScores.length; i ++){
     var li = document.createElement("li")
     li.innerHTML = highScores[i].initials, highScores[i].score;
     uL.append(li)
+    
+   } 
 
-}
-window.location = "scores.html";
-
-return;
-}
+  }
+ displayScore()

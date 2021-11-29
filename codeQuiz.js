@@ -140,11 +140,11 @@ function submitInitials(){
     localStorage.setItem("highScore",JSON.stringify(highscoresArray) );
 
     
- 
+    window.location = "scores.html";
 
   
 }
-window.location = "scores.html";
+
 
 
 startButton.addEventListener('click', startQuiz);
