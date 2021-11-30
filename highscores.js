@@ -40,7 +40,7 @@ function displayScore(){
 
 for (var i = 0; i < highScores.length; i ++){
     var li = document.createElement("li")
-    li.innerHTML = highScores[i].initials + "-" + highScores[i].score;
+    li.innerHTML = highScores[i].initials + " - " + highScores[i].score;
     ul.append(li)
     
    } 
