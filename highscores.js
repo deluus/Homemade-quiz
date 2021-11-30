@@ -2,6 +2,7 @@ var userName = document.querySelector('#highscoresList')
 var highScoresList = document.querySelector("#highScores");
 var saveScoreButton = document.querySelector('#saveScoreButton');
 var mostRecentScore = localStorage.getItem('#mostRecentScore');
+var maxScores= 5;
 
 
 var ul = document.getElementById("highscoresList")
@@ -43,6 +44,12 @@ for (var i = 0; i < highScores.length; i ++){
     li.innerHTML = highScores[i].initials + " - " + highScores[i].score;
     ul.append(li)
     
+   
+   highScores.sort((a,b) => b.score - a.score)
+   highScores.splice(5);
+   localStorage.setItem("highScores", JSON.stringify(highScores));
+   
+  
    } 
 }
  
