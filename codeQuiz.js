@@ -68,6 +68,7 @@ function timer(){
             clearInterval(timeInterval);
 
             alert("Game Over")
+            return ;
         }
 
         if(questionPointer === questions.length) {

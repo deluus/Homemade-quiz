@@ -24,34 +24,62 @@ body{
     padding: 10px;
     box-shadow: 0 0 10px 2px;
 } 
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#start{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /*  sit questions in the grid style. */
 .choices-btn{
     display: grid;
     gap: 20px;
     border-radius: 5px;
+    
 }
 .button{
     background-color: rgb(115, 115, 201);
     outline: none;
     padding: 10px 15px;
     color: white;
+    cursor: pointer;
+
+   
+  
 }
 .button:hover {
     border-color: black;
+   
 }
 .start-button, .next-button{
-    font-size: 20px;
-    font-weight: bold
+  
+    font-size: 30px;
+    font-weight: bold;
+
+  
+    
 }
 
+/*  styles for timer and its contents */
 .timer-container{
-    background-color: green;
+    background-color:palevioletred;
     font-size: 30px;
     border-radius: 10px;
 }
 #time-left{
-    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    margin-bottom: 5px;
+    /* box-shadow: 0 0 1px 1px; */
+
+    
 }
 
 
@@ -66,4 +94,44 @@ body{
     box-shadow: 0 0 10px 2px;
 
 }
+
+#highScores{
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow: 0 0 10px 5px;
+background-color: violet;
+
+}
+
+#highscoresList{
+    display: block;
+    justify-content: center;
+    align-items: center;
+ 
+
+}
+#go-home{
+    border-radius: 20px;
+    
+    
+}
+
+.home-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+
+}
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+.flex-column{
+    justify-content: center;
+    align-items: center;
+}
+
+
 

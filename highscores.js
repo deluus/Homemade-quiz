@@ -1,7 +1,7 @@
-var userName = document.querySelector('#initials')
+var userName = document.querySelector('#highscoresList')
 var highScoresList = document.querySelector("#highScores");
 var saveScoreButton = document.querySelector('#saveScoreButton');
-// var mostRecentScore = document.querySelector('#mostRecentScore');
+var mostRecentScore = localStorage.getItem('#mostRecentScore');
 
 
 var ul = document.getElementById("highscoresList")
@@ -29,16 +29,23 @@ function addElement (){
 function displayScore(){
     var highScores = JSON.parse(localStorage.getItem('highScore')) || []
     
-console.log(highScores)
+// console.log(highScores)
+
+
+// var score = {
+//     score : highScores,
+//     name:  highScoresList
+// };
+// console.log(score)
 
 for (var i = 0; i < highScores.length; i ++){
     var li = document.createElement("li")
-    li.innerHTML = highScores[i].initials + " " + highScores[i].score;
+    li.innerHTML = highScores[i].initials + "-" + highScores[i].score;
     ul.append(li)
     
    } 
 }
  
 
- console.log(displayScore());
+ displayScore();
 
