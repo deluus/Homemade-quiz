@@ -51,7 +51,7 @@
          LINKS
 repo:
 
-https://deluus.github.io/code-quiz/
+https://github.com/deluus/code-quiz
 
 
 page: 
