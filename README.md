@@ -55,6 +55,5 @@ https://github.com/deluus/code-quiz
 
 
 page: 
-
-https://deluus.github.io/code-quiz/
+https://deluus.github.io/Homemade-quiz/
 
