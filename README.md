@@ -40,18 +40,21 @@
 
  - end the game
 
+ # create High Score Page 
+  - created page to store user initials and high scores. 
+  - created a link to return user to main page
+
   
+![](HW4.png)
 
-      start the countdown timer
-      function startTimer (){
-       interval = setIntervalFunction (){
+         
+         LINKS
+repo:
 
-
-           clearInterval(interval);
-
-       }, 1000);
-      }
+https://deluus.github.io/code-quiz/
 
 
-  - stop the timer from counting down
-      ( clear interval function)
+page: 
+
+https://deluus.github.io/code-quiz/
+
