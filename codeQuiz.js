@@ -148,4 +148,4 @@ function submitInitials(){
 
 
 startButton.addEventListener('click', startQuiz);
-// restartButton.addEventListener('click', restartQuiz)
+

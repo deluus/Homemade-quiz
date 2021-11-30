@@ -29,7 +29,7 @@ function addElement (){
 function displayScore(){
     var highScores = JSON.parse(localStorage.getItem('highScore')) || []
     
-// console.log(highScores)
+console.log(highScores)
 
 for (var i = 0; i < highScores.length; i ++){
     var li = document.createElement("li")
